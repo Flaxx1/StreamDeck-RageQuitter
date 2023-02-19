@@ -10,7 +10,15 @@ Rage quit from all Steam and Epic Games for Elgato Stream Deck
 
 ◉ Edit RageQuit.bat, the first path must lead to the installation path of Python.
 
+```
+C:\PATH_TO_YOUR_PYTHON\python.exe
+```
+
 ◉ The second path must lead to RageQuitter.py
+
+```
+C:\PATH_TO_RageQuitter.py\RageQuitter.py
+```
 
 ◉ Edit RageQuitter.py, in line 13 the steamapps directory must be specified.
 
