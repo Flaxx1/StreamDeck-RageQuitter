@@ -26,4 +26,3 @@ exclude_process_names = ['wallpaperservice32_c.exe', 'wallpaper32.exe', 'EpicGam
 ◉ Open Stream Deck app select "Open" under System and select App/File: RageQuit.bat
 
 ### Happy RageQuitting ✓
-
