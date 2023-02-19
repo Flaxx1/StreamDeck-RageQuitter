@@ -14,3 +14,7 @@ Rage quit from all Steam and Epic Games for Elgato Stream Deck
 ◉ Edit RageQuitter.py, in line 13 the steamapps directory must be specified.
 ◉ In line 15, apps can be specified that are not allowed to be closed.
 
+◉ Open Stream Deck app select "Open" under System and select App/File: RageQuit.bat
+
+# Happy RageQuitting ✓
+
