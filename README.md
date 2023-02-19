@@ -1,12 +1,12 @@
 # StreamDeck-RageQuitter
 Rage quit from all Steam and Epic Games for Elgato Stream Deck
 
-# Requirements: 
+## Requirements: 
 
 ✓	Python310 or above
 ✓	pip install psutil
 
-# How To:
+## How To:
 
 ◉ Edit RageQuit.bat, the first path must lead to the installation path of Python.
 ◉ The second path must lead to RageQuitter.py
@@ -25,5 +25,5 @@ exclude_process_names = ['wallpaperservice32_c.exe', 'wallpaper32.exe', 'EpicGam
 
 ◉ Open Stream Deck app select "Open" under System and select App/File: RageQuit.bat
 
-# Happy RageQuitting ✓
+### Happy RageQuitting ✓
 
