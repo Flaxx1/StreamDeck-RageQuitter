@@ -1,9 +1,10 @@
 # StreamDeck-RageQuitter
-Rage quit from all Steam and Epic Games for Elgato Stream Deck
+"RageQuitter" is an application for the Elgato Stream Deck that allows users to quickly quit out of all running Steam and Epic Games games. With this application, players can quit all open games on the Steam and Epic Games platforms with just one keystroke. This is especially useful when users are frustrated or need to quickly switch between different games. The application provides a simple and efficient way to exit games without having to search through multiple windows or menus.
 
 ## Requirements: 
 
 ✓	Python310 or above
+
 ✓	pip install psutil
 
 ## How To:
