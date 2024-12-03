@@ -1,38 +1,120 @@
-# StreamDeck-RageQuitter
-"RageQuitter" is an application for the Elgato Stream Deck that allows users to quickly quit out of all running Steam and Epic Games games. With this application, players can quit all open games on the Steam and Epic Games platforms with just one keystroke. This is especially useful when users are frustrated or need to quickly switch between different games. The application provides a simple and efficient way to exit games without having to search through multiple windows or menus.
+# RageQuitter
 
-## Requirements: 
+**RageQuitter** is a simple tool to terminate processes from specific folders, with the option to exclude certain programs. Designed to work seamlessly with Stream Deck, RageQuitter allows gamers and power users to instantly clean up running processes without manually opening Task Manager.
 
-✓	Python310 or above
+---
 
-✓	pip install psutil
+## 🚀 Features
 
-## How To:
+- Automatically kills processes from specified folders.
+- Allows you to exclude specific programs from termination.
+- Fully customizable through a configuration file.
+- Compatible with Stream Deck for one-button operation.
+- No need for Python installation—runs as a standalone `.exe`.
 
-◉ Edit RageQuit.bat, the first path must lead to the installation path of Python.
+---
 
+## 🛠️ Installation
+
+1. **Download the program**: 
+   - Clone this repository or download the latest release from the [Releases](https://github.com/your-repo-link/releases) section.
+
+2. **Prepare the configuration file**: 
+   - Edit the `config.json` file to specify the paths to scan and the processes to exclude.
+
+3. **Set up with Stream Deck**:
+   - Add a "System" action in your Stream Deck software and point it to the `RageQuitter.exe` file.
+
+---
+
+## 📄 Configuration
+
+The program uses a `config.json` file to determine which folders to scan and which processes to exclude.
+
+### Example `config.json`
+
+```json
+{
+    "folder_paths": [
+        "F:\\Steam\\steamapps",
+        "F:\\Epic Games",
+        "D:\\SteamLibrary"
+    ],
+    "exclude_process_names": [
+        "wallpaperservice32_c.exe",
+        "wallpaper32.exe",
+        "EpicGamesLauncher.exe",
+        "EpicWebHelper.exe"
+    ]
+}
 ```
-C:\PATH_TO_YOUR_PYTHON\python.exe
-```
+- folder_paths: Add paths where the target processes are located.
+- exclude_process_names: List process names to exclude from termination.
 
-◉ The second path must lead to RageQuitter.py
+---
 
-```
-C:\PATH_TO_RageQuitter.py\RageQuitter.py
-```
+## 💡 Usage
 
-◉ Edit RageQuitter.py, in line 13 the steamapps directory must be specified.
+1. **Run RageQuitter**:
+   - Double-click the `RageQuitter.exe` file to execute the program.
+   - Alternatively, trigger it via your Stream Deck button configured with the `.exe`.
 
-```
-folder_paths = [r'D:\Steam\steamapps', r'D:\Epic Games'] 
-```
+2. **Edit the Configuration**:
+   - Open the `config.json` file in a text editor (e.g., Notepad, VS Code).
+   - Add or remove folder paths under `"folder_paths"` to include or exclude specific directories.
+   - Add or remove process names under `"exclude_process_names"` to manage which programs are ignored during termination.
 
-◉ In line 15, apps can be specified that are not allowed to be closed.
+3. **Test it**:
+   - Run the program and ensure the desired processes are terminated while excluded processes remain unaffected.
 
-```
-exclude_process_names = ['wallpaperservice32_c.exe', 'wallpaper32.exe', 'EpicGamesLauncher.exe', 'EpicWebHelper.exe']
-```
+4. **Automate with Stream Deck**:
+   - Add the `.exe` file to a Stream Deck button as a "System > Open" action.
+   - Press the button to instantly terminate processes based on your configuration.
 
-◉ Open Stream Deck app select "Open" under System and select App/File: RageQuit.bat
+---
 
-### Happy RageQuitting ✓
+## ⚠️ Important Notes
+
+- **Administrative Privileges**:
+   Some processes may require admin rights to terminate. If RageQuitter does not work as expected, try running it as an administrator.
+
+- **Use with Caution**:
+   Be careful when adding folder paths to `config.json`. Ensure you only include directories with processes you intend to terminate, as the program will forcefully kill them.
+
+---
+
+## 🖼️ Icon
+
+RageQuitter comes with a custom skull icon for the `.exe` file. If you'd like to use your own icon:
+1. Replace the `skull.ico` file with your desired `.ico` file.
+2. Rebuild the `.exe` using the following PyInstaller command:
+   ```bash
+   pyinstaller --onefile --noconsole --icon=your_icon.ico RageQuitter.py
+
+---
+
+## 🔧 Development
+
+If you'd like to contribute or modify the program:
+
+1. Clone the repository:
+    ```
+   git clone https://github.com/Flaxx1/StreamDeck-RageQuitter.git
+    ```
+2. Install dependencies (if using Python):
+    ```
+   pip install psutil
+    ```
+3. Test the program locally:
+   ```
+    python RageQuitter.py
+   ```
+4. Build the .exe with PyInstaller:
+   ```
+   pyinstaller --onefile --noconsole --icon=skull.ico RageQuitter.py
+   ```
+---
+
+## 📝 License
+
+This project is licensed under the MIT License.
