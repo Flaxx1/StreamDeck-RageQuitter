@@ -1,0 +1,15 @@
+{
+    "folder_paths": [
+        "F:\\Steam\\steamapps",
+        "F:\\Epic Games",
+        "D:\\SteamLibrary",
+        "C:\\NewGameFolder"
+    ],
+    "exclude_process_names": [
+        "wallpaperservice32_c.exe",
+        "wallpaper32.exe",
+        "EpicGamesLauncher.exe",
+        "EpicWebHelper.exe",
+        "new_program.exe"
+    ]
+}
